@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+ <head>
+     <title>Dashboard</title>
+     <style>
+         body{
+           margin: 30px;
+         }
+         .card{
+            padding: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 420px;
+         }
+     </style>
+ </head>
+<body>
+<h2>Dashboard</h2>
+<div class="card">
+    <p>Welcome, <b th:text="${name}">name</b></p>
+    <p>Your email: <b th:text="${email}">email</b></p>
+    <hr/>
+    <p>This page is shown after the login success (session check).</p>
+    <p><a th:href="@{/logout}">Logout</a> </p>
+</div>
+
+</body>
+</html>
